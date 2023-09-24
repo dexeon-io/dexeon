@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "dexeon_backend": {
+      "candid": "src/dexeon_backend/dexeon_backend.did",
+      "package": "dexeon_backend",
+      "type": "rust"
+    },
+    "dexeon_frontend": {
+      "dependencies": [
+        "dexeon_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/dexeon_frontend/src/index.html"
+      },
+      "source": [
+        "src/dexeon_frontend/assets",
+        "dist/dexeon_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
