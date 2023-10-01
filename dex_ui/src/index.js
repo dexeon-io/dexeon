@@ -1,4 +1,4 @@
-import { dexeon_backend } from "../../declarations/dexeon_backend";
+import { exchange } from "../declarations/exchange";
 
 document.querySelector("form").addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -9,7 +9,7 @@ document.querySelector("form").addEventListener("submit", async (e) => {
   button.setAttribute("disabled", true);
 
   // Interact with foo actor, calling the greet method
-  const greeting = await dexeon_backend.greet(name);
+  const greeting = await exchange.greet(name);
 
   button.removeAttribute("disabled");
 
